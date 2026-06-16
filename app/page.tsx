@@ -162,7 +162,7 @@ export default function FertClubPage() {
             <div className="dor-item">
               <div className="dor-x">✕</div>
               <p>
-                Recebe casos que não se encaixam no manual, e fica sem um
+                Recebe casos que não se encaixam no manual e fica sem um
                 caminho claro para investigar a raiz.
               </p>
             </div>
