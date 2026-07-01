@@ -1,3 +1,8 @@
+import Image from "next/image";
+import DoresGrid from "./DoresGrid";
+import ScrollHighlightGroup from "./ScrollHighlightGroup";
+import RevealOnView from "./RevealOnView";
+
 const marqueeItems = [
   "FERTCLUB", "◆", "FERTILIDADE FUNCIONAL", "◆", "DRA FERNANDA TOFOLI", "◆",
   "FERTCLUB", "◆", "FERTILIDADE FUNCIONAL", "◆", "DRA FERNANDA TOFOLI", "◆",
@@ -18,8 +23,14 @@ export default function FertClubPage() {
           <div className="hero-grid">
             <div className="hero-copy">
               <div className="hero-logo">
-                <div className="mark" />
-                FERT<em>Club</em>
+                <Image
+                  src="/logo-fertclub.png"
+                  alt="FertClub"
+                  width={866}
+                  height={277}
+                  className="hero-logo-img"
+                  priority
+                />
               </div>
               <h1>
                 Veja, ao vivo, como conduzir os{" "}
@@ -36,30 +47,81 @@ export default function FertClubPage() {
                 acompanha de perto, tira dúvidas e leva esse olhar para o seu
                 consultório.
               </p>
-              <a href="#oferta" className="cta">
+              <a href="https://chk.eduzz.com/E0D6QK5D91" className="cta">
                 Quero participar do FertClub
               </a>
               <div className="trust-strip">
-                <span>
-                  <b>+500</b> profissionais reunidos
-                </span>
-                <span>
-                  <b>+3.000</b> casais acompanhados pela Dra. Fernanda
-                </span>
-                <span>
-                  Encontros <b>ao vivo</b> todo mês
-                </span>
+                <div className="trust-item">
+                  <svg
+                    className="trust-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--gold)"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="8.5" cy="7.5" r="2.8" />
+                    <path d="M3.5 19c0-3 2.2-5.4 5-5.4s5 2.4 5 5.4" />
+                    <circle cx="16.5" cy="8.5" r="2.2" />
+                    <path d="M14.8 13.8c2.3.5 4 2.5 4 5" />
+                  </svg>
+                  <span>
+                    <b>+500</b> profissionais reunidos
+                  </span>
+                </div>
+                <div className="trust-item">
+                  <svg
+                    className="trust-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--gold)"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="2.4" fill="var(--gold)" stroke="none" />
+                    <path d="M8.6 8.6a5 5 0 0 0 0 6.8" />
+                    <path d="M15.4 8.6a5 5 0 0 1 0 6.8" />
+                    <path d="M5.8 5.8a9 9 0 0 0 0 12.4" opacity="0.5" />
+                    <path d="M18.2 5.8a9 9 0 0 1 0 12.4" opacity="0.5" />
+                  </svg>
+                  <span>
+                    Encontros <b>ao vivo</b> todo mês
+                  </span>
+                </div>
+                <div className="trust-item trust-item-wide">
+                  <svg
+                    className="trust-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--gold)"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="5.5" cy="6" r="2.3" />
+                    <path d="M2 18.5c0-3 1.6-5.3 3.5-5.3s3.5 2.3 3.5 5.3" />
+                    <circle cx="18.5" cy="6" r="2.3" />
+                    <path d="M15 18.5c0-3 1.6-5.3 3.5-5.3s3.5 2.3 3.5 5.3" />
+                    <circle cx="12" cy="10.5" r="1.8" />
+                    <path d="M9 19c0-2.3 1.3-4 3-4s3 1.7 3 4" />
+                  </svg>
+                  <span>
+                    <b>+3.000</b> casais acompanhados pela Dra. Fernanda
+                  </span>
+                </div>
               </div>
             </div>
             <div className="hero-photo">
-              <div className="photo-placeholder">
-                <span className="icon">♣</span>
-                <span>
-                  Foto da Dra. Fernanda
-                  <br />
-                  (a definir)
-                </span>
-              </div>
+              <Image
+                src="/capa.png"
+                alt="Dra. Fernanda Tofoli"
+                width={1080}
+                height={1350}
+                className="hero-photo-img"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -75,69 +137,6 @@ export default function FertClubPage() {
       </div>
 
       {/* ====================================================== */}
-      {/* SEÇÃO 2 · DEPOIMENTOS                                   */}
-      {/* ====================================================== */}
-      <section className="block depo-bg">
-        <div className="wrap">
-          <div className="section-head">
-            <div className="eyebrow">O que os alunos estão dizendo</div>
-            <h2>Profissionais que mudaram o olhar sobre seus casos</h2>
-            <p>
-              O que muda na prática clínica de quem acompanha a Dra. Fernanda
-              mês a mês.
-            </p>
-          </div>
-          <div className="depo-grid">
-            <div className="depo-card">
-              <div className="quote-mark">&ldquo;</div>
-              <p>
-                [ Espaço reservado para depoimento em texto ou print. Inserir o
-                relato de um aluno sobre o impacto do FertClub na condução dos
-                casos. ]
-              </p>
-              <div className="depo-author">
-                <div className="depo-avatar" />
-                <div>
-                  <b>Nome do profissional</b>
-                  <small>Especialidade</small>
-                </div>
-              </div>
-            </div>
-            <div className="depo-card">
-              <div className="quote-mark">&ldquo;</div>
-              <p>
-                [ Espaço reservado para depoimento em texto ou print. Priorizar
-                relatos que citem casos complexos resolvidos ou segurança clínica
-                ganha. ]
-              </p>
-              <div className="depo-author">
-                <div className="depo-avatar" />
-                <div>
-                  <b>Nome do profissional</b>
-                  <small>Especialidade</small>
-                </div>
-              </div>
-            </div>
-            <div className="depo-card">
-              <div className="quote-mark">&ldquo;</div>
-              <p>
-                [ Espaço reservado para depoimento em texto ou print. Bom usar
-                aqui um relato sobre o valor da newsletter e dos encontros
-                gravados. ]
-              </p>
-              <div className="depo-author">
-                <div className="depo-avatar" />
-                <div>
-                  <b>Nome do profissional</b>
-                  <small>Especialidade</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ====================================================== */}
       {/* SEÇÃO 3 · DORES LATENTES                                */}
       {/* ====================================================== */}
       <section className="block dores-bg">
@@ -151,51 +150,7 @@ export default function FertClubPage() {
               resposta.
             </p>
           </div>
-          <div className="dores-grid">
-            <div className="dor-item">
-              <div className="dor-x">✕</div>
-              <p>
-                Você repete o mesmo protocolo padrão e, em alguns casos, sente
-                que ele simplesmente para de funcionar, sem saber o porquê.
-              </p>
-            </div>
-            <div className="dor-item">
-              <div className="dor-x">✕</div>
-              <p>
-                Recebe casos que não se encaixam no manual e fica sem um
-                caminho claro para investigar a raiz.
-              </p>
-            </div>
-            <div className="dor-item">
-              <div className="dor-x">✕</div>
-              <p>
-                Acompanha abortos de repetição sem conseguir explicar à paciente
-                o que está por trás, além de pedir que ela tente de novo.
-              </p>
-            </div>
-            <div className="dor-item">
-              <div className="dor-x">✕</div>
-              <p>
-                Sente que investiga apenas a mulher e trata exames isolados, mas
-                nunca viu alguém avaliar o casal por inteiro,{" "}
-                <b>incluindo a fertilidade do homem na prática real.</b>
-              </p>
-            </div>
-            <div className="dor-item">
-              <div className="dor-x">✕</div>
-              <p>
-                Vê colegas encaminhando direto para reprodução assistida e se
-                pergunta se não havia algo a ser feito antes disso.
-              </p>
-            </div>
-            <div className="dor-item">
-              <div className="dor-x">✕</div>
-              <p>
-                Quer entrar com mais segurança no mercado de fertilidade, mas não
-                tem com quem discutir casos reais e tirar dúvidas de conduta.
-              </p>
-            </div>
-          </div>
+          <DoresGrid />
           <p className="dores-kicker">
             Não é falta de competência. É que ninguém te mostrou,{" "}
             <b>caso a caso</b>, como enxergar a infertilidade por uma lente
@@ -288,7 +243,7 @@ export default function FertClubPage() {
               mês inteiro.
             </p>
           </div>
-          <div className="entreg-list">
+          <ScrollHighlightGroup className="entreg-list" itemSelector=".entreg-card">
 
             {/* Card 1 — Encontro ao vivo */}
             <div className="entreg-card">
@@ -398,9 +353,9 @@ export default function FertClubPage() {
               </div>
             </div>
 
-          </div>
+          </ScrollHighlightGroup>
           <div className="center mt-cta">
-            <a href="#oferta" className="cta">
+            <a href="https://chk.eduzz.com/E0D6QK5D91" className="cta">
               Quero participar do FertClub
             </a>
           </div>
@@ -505,7 +460,7 @@ export default function FertClubPage() {
             <div className="eyebrow">O valor real do que você recebe</div>
             <h2>Veja tudo o que você vai receber</h2>
           </div>
-          <div className="anchor-box">
+          <RevealOnView className="anchor-box">
             <div className="anchor-row">
               <div className="anchor-name">
                 <b>FertClub</b>
@@ -534,7 +489,7 @@ export default function FertClubPage() {
               <div className="label">Tudo isso deveria custar</div>
               <span className="strike">R$ ———</span>
             </div>
-          </div>
+          </RevealOnView>
           <p className="anchor-bridge">
             Mas somente nesta página você pode ter acesso ao FertClub e a todos
             os bônus por <b>uma fração desse valor.</b>
@@ -547,7 +502,7 @@ export default function FertClubPage() {
       {/* ====================================================== */}
       <section className="block offer-bg" id="oferta">
         <div className="wrap">
-          <div className="offer-card">
+          <RevealOnView className="offer-card">
             <div className="offer-badge">Acesso imediato</div>
             <div className="offer-was">
               De <s>R$ XX/mês</s> por apenas
@@ -578,13 +533,13 @@ export default function FertClubPage() {
                 <span className="ck">✓</span> Bônus exclusivos desta página
               </li>
             </ul>
-            <a href="#" className="cta cta-gold">
+            <a href="https://chk.eduzz.com/E0D6QK5D91" className="cta cta-gold">
               Entrar para o FertClub agora
             </a>
             <p className="offer-guarantee">
               Sem fidelidade. Renovação mensal. Cancele quando quiser.
             </p>
-          </div>
+          </RevealOnView>
         </div>
       </section>
 
@@ -595,14 +550,12 @@ export default function FertClubPage() {
         <div className="wrap">
           <div className="bio-grid">
             <div className="bio-photo">
-              <div className="photo-placeholder">
-                <span className="icon">♣</span>
-                <span>
-                  Foto da Dra. Fernanda
-                  <br />
-                  (a definir)
-                </span>
-              </div>
+              <Image
+                src="/bio.webp"
+                alt="Dra. Fernanda Tofoli"
+                fill
+                sizes="(max-width: 900px) 100vw, 420px"
+              />
             </div>
             <div className="bio">
               <div className="eyebrow">Quem conduz o FertClub</div>
@@ -780,7 +733,7 @@ export default function FertClubPage() {
             capacitado para gerar resultados para seus pacientes com
             infertilidade.
           </p>
-          <a href="#oferta" className="cta">
+          <a href="https://chk.eduzz.com/E0D6QK5D91" className="cta">
             Quero participar do FertClub
           </a>
         </div>
